@@ -2,17 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e1708a4-42d7-4b4a-9911-ddb47638deb5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/bias/chatgpt.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/toxicity/chatgpt.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/value-alignment/chatgpt.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bias/bias.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/toxicity/toxicity.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/value-alignment/ava.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2Qx3lqJER39j93MWKatwlTYX0gV" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -61,7 +72,7 @@
       <option name="presentableId" value="Default" />
       <updated>1686281558978</updated>
       <workItem from="1686281561838" duration="54000" />
-      <workItem from="1686281700810" duration="366000" />
+      <workItem from="1686281700810" duration="1414000" />
     </task>
     <servers />
   </component>
