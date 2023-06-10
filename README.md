@@ -28,7 +28,7 @@ Table: Parameter Sizes of eight models
 
 
 ## Dataset
-
+We use social chemistry 101 dataset which contains 292k social norms. [link](https://github.com/mbforbes/social-chemistry-101)  
 
 ## Headboard
 
@@ -52,7 +52,11 @@ Step 2: Create a table in storage to store the testing results ("res" and "actio
 Step 3: Insert the prepared prompt content into the block **<em>loop data</em>**.  
 Prompt format in **<em>loop data</em>**: 
 ```
-[prompt1, prompt2, prompt3, ...]  
+[
+prompt template + social norm 1, 
+prompt template + social norm 2, 
+prompt template + social norm 3, 
+...]  
 ```
 
 Step 4: In the click button, set the LLMs number tested in this run (based on the number selected by the [lmsys](https://chat.lmsys.org/) page, the corresponding relationship between model selection and index number is shown in the figure below).  
