@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3e1708a4-42d7-4b4a-9911-ddb47638deb5" name="Changes" comment="Update readme">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bias/chatgpt.py" beforeDir="false" afterPath="$PROJECT_DIR$/bias/chatgpt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/value-alignment/chatgpt.py" beforeDir="false" afterPath="$PROJECT_DIR$/value-alignment/chatgpt.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +78,7 @@
       <option name="presentableId" value="Default" />
       <updated>1686281558978</updated>
       <workItem from="1686281561838" duration="54000" />
-      <workItem from="1686281700810" duration="6843000" />
+      <workItem from="1686281700810" duration="9218000" />
     </task>
     <task id="LOCAL-00001" summary="add automa files">
       <created>1686311401245</created>
@@ -114,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686376501762</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Update readme">
+      <created>1686378538707</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1686378538707</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
