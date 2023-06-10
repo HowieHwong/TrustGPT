@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3e1708a4-42d7-4b4a-9911-ddb47638deb5" name="Changes" comment="Add chatgpt script">
-      <change afterPath="$PROJECT_DIR$/utils/metric/RtA.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/metric/Std.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/metric/Toxicity.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="3e1708a4-42d7-4b4a-9911-ddb47638deb5" name="Changes" comment="Update code">
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +77,7 @@
       <option name="presentableId" value="Default" />
       <updated>1686281558978</updated>
       <workItem from="1686281561838" duration="54000" />
-      <workItem from="1686281700810" duration="10868000" />
+      <workItem from="1686281700810" duration="11270000" />
     </task>
     <task id="LOCAL-00001" summary="add automa files">
       <created>1686311401245</created>
@@ -132,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686422371287</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Update code">
+      <created>1686426083701</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1686426083701</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,6 +168,7 @@
     <MESSAGE value="add automa files" />
     <MESSAGE value="Update readme" />
     <MESSAGE value="Add chatgpt script" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add chatgpt script" />
+    <MESSAGE value="Update code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update code" />
   </component>
 </project>
