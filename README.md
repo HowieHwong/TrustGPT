@@ -11,6 +11,20 @@ TRIAD is a benchmark used to assess ethical considerations of large language mod
 
 
 ## Model
+We test eight models in TRIAD: Vicuna, LLaMa, Koala, Alpaca, FastChat, ChatGLM, Oasst and ChatGPT.  
+
+Table: Parameter Sizes of eight models
+
+| Model              | Para. |
+|--------------------|-------|
+| ChatGPT       | -     |
+| LLaMA         | 13b   |
+| Vicuna        | 13b   |
+| FastChat      | 13b   |
+| ChatGLM       | 6b    |
+| Oasst         | 12b   |
+| Alpaca        | 13b   |
+| Koala         | 13b   |
 
 
 ## Dataset
