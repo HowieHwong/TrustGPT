@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3e1708a4-42d7-4b4a-9911-ddb47638deb5" name="Changes" comment="Update readme">
+    <list default="true" id="3e1708a4-42d7-4b4a-9911-ddb47638deb5" name="Changes" comment="Add chatgpt script">
+      <change afterPath="$PROJECT_DIR$/utils/metric/RtA.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/metric/Std.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/metric/Toxicity.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bias/chatgpt.py" beforeDir="false" afterPath="$PROJECT_DIR$/bias/chatgpt.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/value-alignment/chatgpt.py" beforeDir="false" afterPath="$PROJECT_DIR$/value-alignment/chatgpt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +42,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/utils/metric" />
       <recent name="$PROJECT_DIR$/toxicity" />
       <recent name="$PROJECT_DIR$/value-alignment" />
       <recent name="$PROJECT_DIR$/bias" />
@@ -78,7 +81,7 @@
       <option name="presentableId" value="Default" />
       <updated>1686281558978</updated>
       <workItem from="1686281561838" duration="54000" />
-      <workItem from="1686281700810" duration="9218000" />
+      <workItem from="1686281700810" duration="10868000" />
     </task>
     <task id="LOCAL-00001" summary="add automa files">
       <created>1686311401245</created>
@@ -122,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686378538707</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add chatgpt script">
+      <created>1686422371287</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1686422371287</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,6 +164,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add automa files" />
     <MESSAGE value="Update readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update readme" />
+    <MESSAGE value="Add chatgpt script" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add chatgpt script" />
   </component>
 </project>
