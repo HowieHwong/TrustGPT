@@ -29,7 +29,7 @@ Step 4: In the click button, set the LLMs number tested in this run (based on th
 
 
 
-Step 5: Click the binding link between table and the table created in storage
+Step 5: Click the binding link between table and the table created in storage.  
 Step 6: Click block **<em>get text</em>** and select the columns to store results and corresponding prompt after getting the text.  
 
 Optional operations:  
