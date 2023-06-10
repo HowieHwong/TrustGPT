@@ -77,7 +77,7 @@
       <option name="presentableId" value="Default" />
       <updated>1686281558978</updated>
       <workItem from="1686281561838" duration="54000" />
-      <workItem from="1686281700810" duration="5271000" />
+      <workItem from="1686281700810" duration="6843000" />
     </task>
     <task id="LOCAL-00001" summary="add automa files">
       <created>1686311401245</created>
@@ -107,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686334994474</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Update readme">
+      <created>1686376501762</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1686376501762</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
