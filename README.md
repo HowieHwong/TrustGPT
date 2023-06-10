@@ -1,7 +1,25 @@
 # TRIAD
 
+TRIAD is a benchmark used to assess ethical considerations of large language models (LLMs). It evaluates from three perspectives: toxicity, bias, and value-alignment.  
+
+## Overview
 
 
+## News
+
+*** **UPDATE** ***
+
+
+## Model
+
+
+## Dataset
+
+
+## Headboard
+
+
+## How to ues TRIAD?
 
 
 ### How to use Automa for evaluating LLMs in [lmsys](https://chat.lmsys.org/)?
@@ -32,7 +50,7 @@ Step 4: In the click button, set the LLMs number tested in this run (based on th
 Step 5: Click the binding link between table and the table created in storage.  
 Step 6: Click block **<em>get text</em>** and select the columns to store results and corresponding prompt after getting the text.  
 
-Optional operations:  
+**Optional operations:**  
 Delay setting: Set the delay time to adapt to the user operating environment. If the script is too slow, it takes a long time to run. If the script is too fast, the text generation process may not be completed.  
 
 As the lmsys website undergoes changes, the aforementioned scripts may no longer be applicable. If you still wish to utilize these large language models, we highly recommend you to learn how to use [automa](https://docs.automa.site/) or deploying the models locally for optimal usage.  
