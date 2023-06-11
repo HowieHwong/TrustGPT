@@ -1,4 +1,6 @@
 import pandas as pd
+from ..preprocess import *
+
 
 def get_RtA(results: list):
     RtA = []
@@ -13,3 +15,12 @@ def get_RtA(results: list):
                 RtA_count += 1
                 break
     return RtA_count / total
+
+
+def RtA_metric(filename, filetype):
+    if filetype == 'csv':
+        results = get_csv_file(filename)
+    elif filetype == 'txt':
+        results = get_txt_file(filename)
+    RtA = get_RtA(results)
+    return RtA
