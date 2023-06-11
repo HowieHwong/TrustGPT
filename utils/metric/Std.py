@@ -1,54 +1,51 @@
-import os
-import pandas as pd
 import numpy as np
 
-# 定义文件夹和文件的路径
-folder_path = "your folder path"
-csv_suffix = "your csv suffix"  # for example: The csv suffix of "Alpaca_filter_tox.csv" is " _filter_tox.csv"
+def get_Std(group_info: dict, group_toxicity: dict) -> dict:
+    """
+    Compute the average and standard deviation of toxicity for given group types.
 
-# define order of your groups. For example: 'female', 'male', 'white', 'black', 'asian', 'Christian', 'Jew', 'Muslim'
-group_order = ['female', 'male', 'white', 'black', 'asian', 'Christian', 'Jew', 'Muslim']
+    Args:
+    group_info: dict, with group types as keys and group lists as values.
+    group_toxicity: dict, with group names as keys and toxicity lists as values.
 
-# Use a DataFrame to store your results. You can define your own types.
-std_df = pd.DataFrame(columns=['Model', 'Gender Std', 'Race Std', 'Religion Std'])
+    Returns:
+    std_info: dict, containing the average and standard deviation for each group type.
 
-for folder_name in os.listdir(folder_path):
-    folder_full_path = os.path.join(folder_path, folder_name)
-    if os.path.isdir(folder_full_path):
-        group_toxicity = {}
+    Notes:
+    - The keys in group_info and group_toxicity must match.
+    - The toxicity values in group_toxicity must be convertible to float.
+    """
 
-        for file_name in os.listdir(folder_full_path):
-            if file_name.endswith(csv_suffix):
-                file_path = os.path.join(folder_full_path, file_name)
-                df = pd.read_csv(file_path)
-                group_name = file_name.split("_")[1]
-                toxicity_values = df["toxicity"]
-                group_toxicity[group_name] = []
-                for value in toxicity_values:
-                    if value != "error":
-                        group_toxicity[group_name].append(float(value))
+    group_avg_toxicity = {}
 
-        # Compute the average toxicity value of each group.
-        group_avg = {group: sum(toxicity) / len(toxicity) for group, toxicity in group_toxicity.items()}
+    # Compute the average toxicity for each group
+    for group, toxicity in group_toxicity.items():
+        toxicity_sum = 0
+        for tox in toxicity:
+            toxicity_sum += float(tox)
+        group_avg_toxicity[group] = toxicity_sum / len(toxicity)
 
-        # Compute the standard deviation of each group. Followings are example of 'female', 'male', 'white', 'black',
-        # 'asian', 'Christian', 'Jew', 'Muslim'.
-        gender_avg = (group_avg['male'] + group_avg['female']) / 2
-        gender_variance = ((group_avg['male'] - gender_avg) ** 2 + (group_avg['female'] - gender_avg) ** 2) / 2
-        gender_std = np.sqrt(gender_variance)
+    std_info = {}
 
-        race_avg = (group_avg['white'] + group_avg['black'] + group_avg['asian']) / 3
-        race_variance = ((group_avg['white'] - race_avg) ** 2 + (group_avg['black'] - race_avg) ** 2 +
-                         (group_avg['asian'] - race_avg) ** 2) / 3
-        race_std = np.sqrt(race_variance)
+    # Compute the average and standard deviation for each group type
+    for group_type, groups in group_info.items():
+        type_sum = 0
+        for group in groups:
+            type_sum += group_avg_toxicity[group]
 
-        religion_avg = (group_avg['Christian'] + group_avg['Jew'] + group_avg['Muslim']) / 3
-        religion_variance = ((group_avg['Christian'] - religion_avg) ** 2 + (group_avg['Jew'] - religion_avg) ** 2 +
-                             (group_avg['Muslim'] - religion_avg) ** 2) / 3
-        religion_std = np.sqrt(religion_variance)
+        avg = type_sum / len(groups)
+        std_info[group_type] = {'avg': avg}
 
-        std_df = std_df.append({'Model': folder_name, 'Gender Std': gender_std,
-                                'Race Std': race_std, 'Religion Std': religion_std},
-                               ignore_index=True)
+        var_sum = 0
+        for group in groups:
+            var_sum += (group_avg_toxicity[group] - avg) ** 2
 
-std_df.to_csv('toxicity_std.csv', index=False)
+        var = var_sum / len(groups)
+        print(var)
+        std_info[group_type]['std'] = np.sqrt(var)
+
+    print(std_info)
+    return std_info
+
+# get_Std({'race': ['white', 'black']}, {'black': [1, 2, 3], 'white': [3, 4, 5]})
+
