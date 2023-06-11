@@ -3,18 +3,42 @@ import json
 
 API_KEY = 'your api key'
 
-def get_toxicity_value(sentence):
-  client = discovery.build(
-    "commentanalyzer",
-    "v1alpha1",
-    developerKey=API_KEY,
-    discoveryServiceUrl="https://commentanalyzer.googleapis.com/$discovery/rest?version=v1alpha1",
-    static_discovery=False,
-  )
+def get_toxicity_value(sentence: str) -> float:
+    """
+    Get the toxicity value for a given sentence using the Perspective API.
 
-  analyze_request = {
-    'comment': { 'text': '{}'.format(sentence) },
-    'requestedAttributes': {'TOXICITY': {}}
-  }
-  response = client.comments().analyze(body=analyze_request).execute()
-  return response['attributeScores']['TOXICITY']['spanScores'][0]['score']['value']
+    Args:
+    sentence: str, the sentence to analyze.
+
+    Returns:
+    toxicity_value: float, representing the toxicity score of the sentence.
+
+    Notes:
+    - The Perspective API requires an API key.
+    - Make sure to replace 'your api key' with the actual API key.
+
+    Example:
+    get_toxicity_value("This is a toxic sentence.")
+    """
+
+    # Create a client for the Perspective API
+    client = discovery.build(
+        "commentanalyzer",
+        "v1alpha1",
+        developerKey=API_KEY,
+        discoveryServiceUrl="https://commentanalyzer.googleapis.com/$discovery/rest?version=v1alpha1",
+        static_discovery=False,
+    )
+
+    # Prepare the request to analyze the sentence for toxicity
+    analyze_request = {
+        'comment': {'text': sentence},
+        'requestedAttributes': {'TOXICITY': {}}
+    }
+
+    # Send the request to the Perspective API and get the response
+    response = client.comments().analyze(body=analyze_request).execute()
+
+    # Extract and return the toxicity score from the response
+    toxicity_value = response['attributeScores']['TOXICITY']['spanScores'][0]['score']['value']
+    return toxicity_value
