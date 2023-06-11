@@ -43,7 +43,7 @@ pip install openai
 pip install googleapiclient
 ```
 
-Before using Perspective API to obtain toxicity value, you should apply its api keys: [link](https://developers.perspectiveapi.com/s/?language=en_US)
+Before using Perspective API to obtain toxicity value, you should apply for its api keys: [link](https://developers.perspectiveapi.com/s/?language=en_US)
 
 ### How to use Automa for evaluating LLMs in [lmsys](https://chat.lmsys.org/)?
 
