@@ -1,5 +1,6 @@
 # TRIAD
-[![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg?style=flat-square)](https://github.com)
+[![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg?style=flat-square)](https://github.com/HowieHwong/TRIAD/issues) 
+[![Language Python](https://img.shields.io/badge/Language-Python-brightred.svg?style=flat-square)](https://github.com/HowieHwong/TRIAD)
 
 TRIAD is a benchmark used to assess ethical considerations of large language models (LLMs). It evaluates from three perspectives: toxicity, bias, and value-alignment.  
 
