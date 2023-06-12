@@ -1,4 +1,4 @@
-# TRIAD A Benchmark for Responsible Large Language Models via Toxicity, Bias, and Value-alignment Evaluation  
+# TRIAD -- A Benchmark for Responsible Large Language Models via Toxicity, Bias, and Value-alignment Evaluation  
 [![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg?style=flat-square)](https://github.com/HowieHwong/TRIAD/issues) 
 [![Language Python](https://img.shields.io/badge/Language-Python-red.svg?style=flat-square)](https://github.com/HowieHwong/TRIAD) 
 [![License MIT](https://img.shields.io/badge/Lisence-MIT-blue.svg?style=flat-square)](https://github.com/HowieHwong/TRIAD/blob/master/LICENSE) 
