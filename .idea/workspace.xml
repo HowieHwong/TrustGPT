@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e1708a4-42d7-4b4a-9911-ddb47638deb5" name="Changes" comment="Update code">
+      <change afterPath="$PROJECT_DIR$/utils/dataset/load_dataset.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/dataset/load.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +54,7 @@
       <recent name="$PROJECT_DIR$/bias" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.load">
+  <component name="RunManager" selected="Python.load_dataset">
     <configuration name="Std" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="TRIAD" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -76,7 +77,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="load" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="load_dataset" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="TRIAD" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -89,7 +90,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/dataset/load.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/dataset/load_dataset.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -122,7 +123,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.load" />
+        <item itemvalue="Python.load_dataset" />
         <item itemvalue="Python.Std" />
       </list>
     </recent_temporary>
@@ -137,7 +138,7 @@
       <updated>1686281558978</updated>
       <workItem from="1686281561838" duration="54000" />
       <workItem from="1686281700810" duration="14549000" />
-      <workItem from="1686464954886" duration="22769000" />
+      <workItem from="1686464954886" duration="25991000" />
     </task>
     <task id="LOCAL-00001" summary="add automa files">
       <created>1686311401245</created>
@@ -258,7 +259,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686491926448</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Update code">
+      <created>1686499294753</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1686499294753</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,7 +304,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="Update code" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/TRIAD$load.coverage" NAME="load Coverage Results" MODIFIED="1686480675246" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils/dataset" />
+    <SUITE FILE_PATH="coverage/TRIAD$load.coverage" NAME="load Coverage Results" MODIFIED="1686534774597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils/dataset" />
     <SUITE FILE_PATH="coverage/TRIAD$Std.coverage" NAME="Std Coverage Results" MODIFIED="1686476042580" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils/metric" />
   </component>
 </project>
