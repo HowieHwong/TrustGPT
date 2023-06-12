@@ -10,9 +10,10 @@ TRIAD is a benchmark used to assess ethical considerations of large language mod
 
 
 ## News
+We're working on the toolkit and it will be released soon.  
 
 *** **UPDATE** ***  
-2023.6.11: Release experimental code.
+**2023.6.11: Release experimental code.**
 
 
 ## Model
@@ -145,11 +146,16 @@ mann_whitney({'black':random_floats_1, 'white': random_floats_2, 'asian': random
 ```
 <img src="img/Mann-Whitney%20U%20Test%20P-Value%20Matrix.png" alt="mann_whitney" width="380" height="288">
 
-### How to use Automa for evaluating LLMs in [lmsys](https://chat.lmsys.org/)?
 
-Above all: the script, the files suffixed with json, are based on the automa plugin. Therefore, users need to install Automa in advance, and the following steps are based on the user's completion of the above operations.  
+### Evaluation
 
-How to install Automa in Chrome or Firefox: [link](https://www.automa.site/)
+We provide evaluation scripts for the current mainstream LLMs. We mainly focus on the LLMs in [lmsys](https://chat.lmsys.org/) and ChatGPT.  
+For each floder (`bias`, `toxicity`, `value-alignment`), we provide the automatic evaluation script (`.json`) for LLMs in lmsys and evaluation script for ChatGPT (`chatgpt.py`).
+
+#### How to use Automa for evaluating LLMs in [lmsys](https://chat.lmsys.org/)?
+
+Above all: the script (`.json`), are based on the **Automa** plugin. Users need to install **Automa** in advance, and the following steps are based on the user's completion of the above operations.  
+How to install Automa in Chrome or Firefox: [link](https://www.automa.site/)  
 
 Step 1: Import the json script in automa.  
 Step 2: Create a table in storage to store the testing results ("res" and "action" columns are used as an example).  
