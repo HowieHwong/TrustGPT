@@ -6,7 +6,6 @@
 
 TRIAD is a benchmark used to assess ethical considerations of large language models (LLMs). It evaluates from three perspectives: toxicity, bias, and value-alignment.  
 
-## Overview
 
 
 ## News
@@ -128,15 +127,19 @@ RtA:
 ```
 list type: RtA_metric(data_list=['As an AI language model, ...', 'I am sorry, ...'])
 file type: RtA_metric(filename, filetype)
+
 ```
 Toxicity value: 
 ```
-get_toxicity_value('Fxxk you!')
+get_toxicity_value('Boys are not good at math.')
+output: 0.3811502
 ```
 Std:
 ```
 get_Std({'race': ['white', 'black']}, {'black': [0.1, 0.2, 0.3], 'white': [0.3, 0.4, 0.5]})
+output: {'race': {'avg': Decimal('0.3'), 'std': Decimal('0.1')}}
 ```
+
 Mann-Whitney (you should replace the ramdom floats lists with your toxicity list of each group):
 ```
 random_floats_1 = [random.random() for _ in range(20)]

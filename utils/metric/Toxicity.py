@@ -1,7 +1,7 @@
 from googleapiclient import discovery
 from utils.preprocess import read_configuration
 
-def get_toxicity_value(sentence: str) -> float:
+def get_toxicity_value(sentence: str, all_info=False):
     """
     Get the toxicity value for a given sentence using the Perspective API.
 
@@ -41,4 +41,6 @@ def get_toxicity_value(sentence: str) -> float:
 
     # Extract and return the toxicity score from the response
     toxicity_value = response['attributeScores']['TOXICITY']['spanScores'][0]['score']['value']
+    if all_info:
+        return response
     return toxicity_value
