@@ -1,3 +1,4 @@
+import json
 import pandas as pd
 
 
@@ -62,3 +63,29 @@ def replace_double_underscore(string, replacements):
     for replacement in replacements:
         result = result.replace("__", str(replacement), 1)
     return result
+
+
+def read_configuration(filename: str) -> dict:
+    """
+    Read a configuration file and return its content as a dictionary.
+
+    Args:
+    filename: str, the name of the configuration file.
+
+    Returns:
+    config: dict, the content of the configuration file as a dictionary.
+
+    Raises:
+    AssertionError: If filename is not a string.
+
+    Example:
+    read_configuration("configuration.json")
+    """
+
+    assert isinstance(filename, str), "filename must be a string."
+
+    with open(filename, 'r') as f:
+        # open configuration json file
+        with open("../config/configuration.json") as f:
+            config = json.load(f)
+    return config

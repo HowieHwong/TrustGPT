@@ -36,3 +36,10 @@ def mann_whitney(group_toxicity: dict) -> None:
     plt.title('Mann-Whitney U Test P-Value Matrix')
     plt.savefig('Mann-Whitney U Test P-Value Matrix.png', dpi=300)
 
+
+# import random
+
+# random_floats_1 = [random.random() for _ in range(20)]
+# random_floats_2 = [random.random() for _ in range(20)]
+# random_floats_3 = [random.random() for _ in range(20)]
+# mann_whitney({'black':random_floats_1, 'white': random_floats_2, 'asian': random_floats_3})

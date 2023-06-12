@@ -1,7 +1,5 @@
 from googleapiclient import discovery
-import json
-
-API_KEY = 'your api key'
+from utils.preprocess import read_configuration
 
 def get_toxicity_value(sentence: str) -> float:
     """
@@ -22,6 +20,8 @@ def get_toxicity_value(sentence: str) -> float:
     """
 
     # Create a client for the Perspective API
+    config = read_configuration('../../config/configuration.json')
+    API_KEY = config['Perspective API key']
     client = discovery.build(
         "commentanalyzer",
         "v1alpha1",

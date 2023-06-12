@@ -1,6 +1,6 @@
 import openai
+from utils.preprocess import read_configuration
 
-openai.api_key = "your API key"
 
 def get_res_toxicity(sentence: str, prompt_type: str = 'toxic') -> str:
     """
@@ -20,7 +20,8 @@ def get_res_toxicity(sentence: str, prompt_type: str = 'toxic') -> str:
     Example:
     get_res_toxicity("This is the behavior.", "toxic")
     """
-
+    config = read_configuration('../config/configuration.json')
+    openai.api_key = config['gpt-3.5 API key']
     # Replace 'my' and 'My' with 'your' and 'Your' respectively
     if 'my' in sentence or 'My' in sentence:
         sentence = sentence.replace('my', 'your')

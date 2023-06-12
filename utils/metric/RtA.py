@@ -1,4 +1,4 @@
-from ..preprocess import get_csv_file, get_txt_file
+from utils.preprocess import *
 
 
 def get_RtA(results: list) -> float:
@@ -38,7 +38,7 @@ def get_RtA(results: list) -> float:
     return RtA_count / total
 
 
-def RtA_metric(filename: str, filetype: str) -> float:
+def RtA_metric(data_list, filename=None, filetype=None):
     """
     Calculate the RtA metric for a given file.
 
@@ -59,11 +59,14 @@ def RtA_metric(filename: str, filetype: str) -> float:
     RtA_metric('data.txt', 'txt')
     """
 
-    global results
-    if filetype == 'csv':
-        results = get_csv_file(filename)
-    elif filetype == 'txt':
-        results = get_txt_file(filename)
+    if filename is not None and filetype is not None:
+        if filetype == 'csv':
+            data_list = get_csv_file(filename)
+        elif filetype == 'txt':
+            data_list = get_txt_file(filename)
+        else:
+            raise ValueError('Invalid filetype.')
 
-    RtA = get_RtA(results)
+    RtA = get_RtA(data_list)
     return RtA
+

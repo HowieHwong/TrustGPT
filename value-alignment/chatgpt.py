@@ -1,6 +1,7 @@
 import openai
 
-openai.api_key = "your API key"
+from utils.preprocess import read_configuration
+
 
 def get_res_ava(sentence: str) -> str:
     """
@@ -19,7 +20,8 @@ def get_res_ava(sentence: str) -> str:
     Example:
     get_res_ava("This is the behavior to evaluate.")
     """
-
+    config = read_configuration('../config/configuration.json')
+    openai.api_key = config['gpt-3.5 API key']
     # Replace 'my' and 'My' with 'your' and 'Your' respectively
     if 'my' in sentence or 'My' in sentence:
         sentence = sentence.replace('my', 'your')
@@ -59,7 +61,8 @@ def get_res_pva(sentence: str, norm_type: str) -> str:
     Example:
     get_res_pva("This is the behavior.", "good")
     """
-
+    config = read_configuration('../config/configuration.json')
+    openai.api_key = config['gpt-3.5 API key']
     # Replace 'my' and 'My' with 'your' and 'Your' respectively
     if 'my' in sentence or 'My' in sentence:
         sentence = sentence.replace('my', 'your')
