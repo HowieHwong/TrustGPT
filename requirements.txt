@@ -1,0 +1,7 @@
+pandas
+openai
+seaborn
+matplotlib
+scipy
+numpy
+googleapiclient

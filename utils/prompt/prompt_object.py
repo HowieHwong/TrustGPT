@@ -1,6 +1,5 @@
-import json
 from typing import Optional, Union
-from ..preprocess import *
+from utils.preprocess import *
 
 class PromptObject:
     def __init__(
@@ -9,7 +8,6 @@ class PromptObject:
         data_item: Optional[Union[list, dict]] = None,  # Data items used in the default prompt template (default: None)
         prompt_type: Optional[str] = "default",  # Type of prompt (available: "default" or "custom")
         prompt_file: Optional[str] = "prompt_template/default.json",  # Prompt template file (default: "prompt_template/default.json")
-        value_alignment: Optional[bool] = False  # Indicates if value alignment is enabled (default: False)
     ):
         self.customList = None
         self.prompt_template_value_alignment_good = None
@@ -27,15 +25,14 @@ class PromptObject:
         self.prompt_section = prompt_section
         self.prompt_file = prompt_file
         self.data_item = data_item
-        self.value_alignment = value_alignment
 
     def read_default(self):
         with open(self.prompt_file) as f:
             self.prompt_template = json.load(f)
             self.prompt_template_bias = self.prompt_template['bias']
             self.prompt_template_toxicity = self.prompt_template['toxicity']
-            self.prompt_template_value_alignment_bad = self.prompt_template['value_alignment']['bad']
-            self.prompt_template_value_alignment_good = self.prompt_template['value_alignment']['good']
+            self.prompt_template_value_alignment_bad = self.prompt_template['value-alignment']['bad']
+            self.prompt_template_value_alignment_good = self.prompt_template['value-alignment']['good']
 
     def default_prompt(self):
         assert self.prompt_type == "default"
@@ -49,7 +46,8 @@ class PromptObject:
         else:
             raise NotImplementedError("Prompt type {} not implemented".format(self.prompt_section))  # Raise an error for unsupported prompt types
 
-    def construct_default_prompt(self, prompt_words: str, groups: Optional[list] = None):
+    def construct_default_prompt(self, prompt_words: Optional[str] = None, groups: Optional[list] = None):
+        self.default_prompt()
         if self.prompt_section == 'toxicity':
             self.constructList = []
             for item in self.data_item:
@@ -68,7 +66,6 @@ class PromptObject:
                     self.constructDict[group].append(prompt_item)
             return self.constructDict
         elif self.prompt_section == 'value_alignment':
-            assert self.value_alignment is True  # Ensure value alignment is enabled
             assert isinstance(self.data_item, dict)  # Ensure data items are in dictionary format
             self.constructList = []
             for item, norm_label in self.data_item.items():
@@ -81,7 +78,7 @@ class PromptObject:
                 self.constructList.append(prompt_item)
             return self.constructList
         else:
-            raise NotImplementedError("Prompt type {} not implemented".format(self.prompt_section))  # Raise an error for unsupported prompt types
+            raise NotImplementedError("Prompt section {} not implemented".format(self.prompt_section))  # Raise an error for unsupported prompt types
 
     def custom_prompt(self, prompt_template: str, custom_data: list):
         assert prompt_template.count("__") == len(custom_data)  # Ensure the number of placeholders in the template matches the length of custom data
@@ -92,3 +89,9 @@ class PromptObject:
             prompt_item = replace_double_underscore(prompt_item, item)  # Replace placeholders in the template with actual values
             self.customList.append(prompt_item)
         return self.customList
+
+
+# prompt_cons = PromptObject(prompt_type='default', prompt_section='value_alignment', data_item={'Keeping things clean': 'good', 'hating helping others': 'bad'})
+# value_alignment_data = prompt_cons.construct_default_prompt()
+# print(value_alignment_data)
+
