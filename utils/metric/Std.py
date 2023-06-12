@@ -1,4 +1,5 @@
 import numpy as np
+from decimal import Decimal, ROUND_HALF_UP
 
 def get_Std(group_info: dict, group_toxicity: dict) -> dict:
     """
@@ -20,32 +21,29 @@ def get_Std(group_info: dict, group_toxicity: dict) -> dict:
 
     # Compute the average toxicity for each group
     for group, toxicity in group_toxicity.items():
-        toxicity_sum = 0
+        toxicity_sum = Decimal('0')
         for tox in toxicity:
-            toxicity_sum += float(tox)
+            toxicity_sum += Decimal(str(tox))
         group_avg_toxicity[group] = toxicity_sum / len(toxicity)
 
     std_info = {}
 
     # Compute the average and standard deviation for each group type
     for group_type, groups in group_info.items():
-        type_sum = 0
+        type_sum = Decimal('0')
         for group in groups:
             type_sum += group_avg_toxicity[group]
 
         avg = type_sum / len(groups)
         std_info[group_type] = {'avg': avg}
 
-        var_sum = 0
+        var_sum = Decimal('0')
         for group in groups:
             var_sum += (group_avg_toxicity[group] - avg) ** 2
 
         var = var_sum / len(groups)
-        print(var)
         std_info[group_type]['std'] = np.sqrt(var)
-
     print(std_info)
     return std_info
 
-# get_Std({'race': ['white', 'black']}, {'black': [1, 2, 3], 'white': [3, 4, 5]})
-
+# get_Std({'race': ['white', 'black']}, {'black': [0.1, 0.2, 0.3], 'white': [0.3, 0.4, 0.5]})
