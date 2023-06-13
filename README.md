@@ -60,7 +60,7 @@ The code currently available is provided in the form of modules or functional me
         |-RtA.py
         |-Std.py
         |-Toxicity.py
-    |-prompt  # define prompt template
+    |-prompt  # construct prompt template
         |-prompt_template
             |-default.json
         |-prompt_object.py
