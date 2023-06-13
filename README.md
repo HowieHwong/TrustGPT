@@ -35,7 +35,6 @@ Table: Parameter sizes of eight models
 ## Dataset
 We use social chemistry 101 dataset which contains 292k social norms. [link](https://github.com/mbforbes/social-chemistry-101)  
 
-## Headboard
 
 
 ## How to ues TRIAD?
@@ -68,7 +67,7 @@ The code currently available is provided in the form of modules or functional me
 ```
 
 ### Setup
-Package requirement: 
+
 ```
 git clone https://github.com/HowieHwong/TRIAD.git
 cd TRIAD
