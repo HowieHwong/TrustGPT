@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e1708a4-42d7-4b4a-9911-ddb47638deb5" name="Changes" comment="Update code">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,6 +208,7 @@
       <workItem from="1686281700810" duration="14549000" />
       <workItem from="1686464954886" duration="39637000" />
       <workItem from="1686552630399" duration="7671000" />
+      <workItem from="1686661579543" duration="319000" />
     </task>
     <task id="LOCAL-00001" summary="add automa files">
       <created>1686311401245</created>
@@ -426,7 +427,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686564771604</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Update code">
+      <created>1686661599020</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1686661599020</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
