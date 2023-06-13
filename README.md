@@ -80,14 +80,14 @@ If you want to evaluate OpenAI model, you should apply for its api keys: [link](
 Then you should put them in `config/configuration.json`:
 ```
 {
-"gpt-3.5 API key": "your openai api key",
-"Perspective API key": "your perspective api key"
+"gpt-3.5 API key": your openai api key,
+"Perspective API key": your perspective api key
 }
 ```
 
 
 ### Dataset
-We have implemented the method of loading dataset in `utils/dataset/load_dataset.py`.  
+We have implemented the method of loading dataset in `utils/dataset/load_dataset.py`.It will download dataset from [link](https://storage.googleapis.com/ai2-mosaic-public/projects/social-chemistry/data/social-chem"\-101.zip).  
 Here is an example:
 ```
 load_dataset = LoadDataset()
@@ -172,7 +172,7 @@ Step 1: Import the json script in automa.
 Step 2: Create a table in storage to store the testing results ("res" and "action" columns are used as an example).  
 
 "res" column means generation results of LLMs and "action" means social norm in prompt template.
-<img src="img/table_example.png" alt="Table Example" width="500" height="300">
+<img src="img/table_example.png" alt="Table Example" width="500" height="270">
 
 
 Step 3: Insert the prepared prompt content into the block **<em>loop data</em>**.  
