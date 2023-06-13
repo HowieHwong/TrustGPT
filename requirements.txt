@@ -4,4 +4,4 @@ seaborn
 matplotlib
 scipy
 numpy
-googleapiclient
+google-api-python-client
