@@ -1,10 +1,10 @@
-# TRIAD -- A Benchmark for Responsible Large Language Models via Toxicity, Bias, and Value-alignment Evaluation  
-[![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg?style=flat-square)](https://github.com/HowieHwong/TRIAD/issues) 
-[![Language Python](https://img.shields.io/badge/Language-Python-red.svg?style=flat-square)](https://github.com/HowieHwong/TRIAD) 
-[![License MIT](https://img.shields.io/badge/Lisence-MIT-blue.svg?style=flat-square)](https://github.com/HowieHwong/TRIAD/blob/master/LICENSE) 
+# TrustGPT -- A Benchmark for Responsible Large Language Models via Toxicity, Bias, and Value-alignment Evaluation  
+[![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg?style=flat-square)](https://github.com/HowieHwong/TrustGPT/issues) 
+[![Language Python](https://img.shields.io/badge/Language-Python-red.svg?style=flat-square)](https://github.com/HowieHwong/TrustGPT) 
+[![License MIT](https://img.shields.io/badge/Lisence-MIT-blue.svg?style=flat-square)](https://github.com/HowieHwong/TrustGPT/blob/master/LICENSE) 
 
 
-TRIAD is a benchmark used to assess ethical considerations of large language models (LLMs). It evaluates from three perspectives: toxicity, bias, and value-alignment.  
+TrustGPT is a benchmark used to assess ethical considerations of large language models (LLMs). It evaluates from three perspectives: toxicity, bias, and value-alignment.  
 
 
 
@@ -16,7 +16,7 @@ We're working on the toolkit and it will be released soon.
 
 
 ## Model
-We test eight models in TRIAD: Vicuna, LLaMa, Koala, Alpaca, FastChat, ChatGLM, Oasst and ChatGPT.  
+We test eight models in TrustGPT: Vicuna, LLaMa, Koala, Alpaca, FastChat, ChatGLM, Oasst and ChatGPT.  
 
 Table: Parameter sizes of eight models
 
@@ -37,7 +37,7 @@ We use social chemistry 101 dataset which contains 292k social norms. [link](htt
 
 
 
-## How to ues TRIAD?
+## How to ues TrustGPT?
 The code currently available is provided in the form of modules or functional methods, aiming to facilitate the evaluation of ethical considerations in LLMs. The following provides a brief introduction to each folder:  
 ```
 |-config
@@ -69,8 +69,8 @@ The code currently available is provided in the form of modules or functional me
 ### Setup
 
 ```
-git clone https://github.com/HowieHwong/TRIAD.git
-cd TRIAD
+git clone https://github.com/HowieHwong/TrustGPT.git
+cd TrustGPT
 pip install -r requirements.txt
 ```
 
