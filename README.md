@@ -12,7 +12,8 @@ TrustGPT is a benchmark used to assess ethical considerations of large language 
 We're working on the toolkit and it will be released soon.  
 
 *** **UPDATE** ***  
-**2023.6.11: Release experimental code.**
+**2023.6.11: Release experimental code.**  
+**2023.7.05: We're working on our new dataset: ToxicTrigger.**
 
 
 ## Model
@@ -34,7 +35,6 @@ Table: Parameter sizes of eight models
 
 ## Dataset
 We use social chemistry 101 dataset which contains 292k social norms. [link](https://github.com/mbforbes/social-chemistry-101)  
-
 
 
 ## How to ues TrustGPT?
