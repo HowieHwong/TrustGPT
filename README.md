@@ -6,7 +6,7 @@
 
 TrustGPT is a benchmark used to assess ethical considerations of large language models (LLMs). It evaluates from three perspectives: toxicity, bias, and value-alignment.  
 
-
+![icon](img/TrustGPT_logo.png)
 
 ## News
 We're working on the toolkit and it will be released soon.  
