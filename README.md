@@ -13,7 +13,7 @@ We're working on the toolkit and it will be released soon.
 
 *** **UPDATE** ***  
 **2023.6.11: Release experimental code.**  
-**2023.7.05: We're working on our new dataset: ToxicTrigger.**
+**2023.7.05: We're working on our new dataset: ToxicTrigger.**  
 **2023.10.12: Version 2 of TrustGPT will be released at the end of this month.**
 
 
